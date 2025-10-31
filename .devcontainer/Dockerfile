@@ -6,4 +6,4 @@ RUN echo "deb [trusted=yes] https://netdevops.fury.site/apt/ /" | \
 
 RUN sudo apt update && sudo apt install containerlab
 RUN usermod -aG clab_admins vscode
-
+RUN sudo bash -c "containerlab completion bash > /etc/bash_completion.d/containerlab"
