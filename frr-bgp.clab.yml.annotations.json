@@ -33,6 +33,17 @@
       "borderRadius": 0,
       "color": "#ebecf0",
       "labelPosition": "top-center"
+    },
+    {
+      "id": "AS 64505:1",
+      "backgroundColor": "#d9d9d9",
+      "backgroundOpacity": 20,
+      "borderColor": "#dddddd",
+      "borderWidth": 0.5,
+      "borderStyle": "solid",
+      "borderRadius": 0,
+      "color": "#ebecf0",
+      "labelPosition": "top-center"
     }
   ],
   "cloudNodeAnnotations": [],
@@ -101,9 +112,23 @@
         "y": 35
       },
       "geoCoordinates": {
-        "lat": 48.78482688840226,
-        "lng": 9.44122872395901
+        "lat": 48.83282688840226,
+        "lng": 9.550562057292343
       }
+    },
+    {
+      "id": "client-rtr",
+      "icon": "router",
+      "position": {
+        "x": 77,
+        "y": 147
+      },
+      "geoCoordinates": {
+        "lat": 48.82482688840226,
+        "lng": 9.53233983507012
+      },
+      "group": "AS 64505",
+      "level": "1"
     }
   ]
 }
