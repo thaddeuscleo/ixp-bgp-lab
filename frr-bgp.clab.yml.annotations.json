@@ -1,0 +1,105 @@
+{
+  "freeTextAnnotations": [],
+  "groupStyleAnnotations": [
+    {
+      "id": "AS 64501:1",
+      "backgroundColor": "#d9d9d9",
+      "backgroundOpacity": 20,
+      "borderColor": "#dddddd",
+      "borderWidth": 0.5,
+      "borderStyle": "solid",
+      "borderRadius": 0,
+      "color": "#ebecf0",
+      "labelPosition": "top-center"
+    },
+    {
+      "id": "AS 64502:1",
+      "backgroundColor": "#d9d9d9",
+      "backgroundOpacity": 20,
+      "borderColor": "#dddddd",
+      "borderWidth": 0.5,
+      "borderStyle": "solid",
+      "borderRadius": 0,
+      "color": "#ebecf0",
+      "labelPosition": "top-center"
+    },
+    {
+      "id": "AS 64503:1",
+      "backgroundColor": "#d9d9d9",
+      "backgroundOpacity": 20,
+      "borderColor": "#dddddd",
+      "borderWidth": 0.5,
+      "borderStyle": "solid",
+      "borderRadius": 0,
+      "color": "#ebecf0",
+      "labelPosition": "top-center"
+    }
+  ],
+  "cloudNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "valid-rtr",
+      "icon": "router",
+      "position": {
+        "x": 77,
+        "y": 35
+      },
+      "geoCoordinates": {
+        "lat": 48.684826888402256,
+        "lng": 9.207895390625676
+      }
+    },
+    {
+      "id": "google-rtr",
+      "icon": "router",
+      "position": {
+        "x": 273,
+        "y": 35
+      },
+      "geoCoordinates": {
+        "lat": 48.88482688840226,
+        "lng": 9.407895390625677
+      }
+    },
+    {
+      "id": "oixp-rs-rtr-1",
+      "icon": "router",
+      "position": {
+        "x": 147,
+        "y": -49
+      },
+      "geoCoordinates": {
+        "lat": 48.78482688840226,
+        "lng": 9.452339835070122
+      },
+      "group": "AS 64503",
+      "level": "1"
+    },
+    {
+      "id": "oixp-rs-rtr-2",
+      "icon": "router",
+      "position": {
+        "x": 203,
+        "y": -49
+      },
+      "geoCoordinates": {
+        "lat": 48.98482688840226,
+        "lng": 9.652339835070123
+      },
+      "group": "AS 64503",
+      "level": "1"
+    },
+    {
+      "id": "oixp",
+      "icon": "bridge",
+      "position": {
+        "x": 175,
+        "y": 35
+      },
+      "geoCoordinates": {
+        "lat": 48.78482688840226,
+        "lng": 9.44122872395901
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+name: frr
+
+topology:
+  nodes:
+    valid-rtr:
+      kind: linux
+      image: quay.io/frrouting/frr:10.0.4
+      binds:
+        - router1/frr.conf:/etc/frr/frr.conf
+        - router1/daemons:/etc/frr/daemons
+    google-rtr:
+      kind: linux
+      image: quay.io/frrouting/frr:10.0.4
+      binds:
+        - router2/frr.conf:/etc/frr/frr.conf
+        - router2/daemons:/etc/frr/daemons    
+    oixp-rs-rtr-1:
+      kind: linux
+      image: quay.io/openbgpd/openbgpd:7.9
+      binds:
+        - router3/openbgpd.conf:/etc/bgpd/bgpd.conf
+      exec:
+        - "ip address add dev eth1 192.168.2.3/24"
+    oixp-rs-rtr-2:
+      kind: linux
+      image: ghcr.io/srl-labs/bird:2.13
+      binds:
+        - router3/bird.conf:/etc/bird.conf
+      exec:
+        - "ip address add dev eth1 192.168.2.4/24"
+    oixp:
+      kind: bridge
+
+  
+  links:
+    - endpoints: ["valid-rtr:eth1", "oixp:port1"]
+    - endpoints: ["google-rtr:eth1", "oixp:port2"]
+    - endpoints: ["oixp-rs-rtr-1:eth1", "oixp:port3"]
+    - endpoints: ["oixp-rs-rtr-2:eth1", "oixp:port4"]
