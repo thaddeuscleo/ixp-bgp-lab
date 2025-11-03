@@ -8,12 +8,20 @@ topology:
       binds:
         - router1/frr.conf:/etc/frr/frr.conf
         - router1/daemons:/etc/frr/daemons
+      exec:
+        - "sysctl -w net.ipv4.ip_forward=1"
+        - "sysctl -w net.ipv4.conf.all.rp_filter=0"
+        - "sysctl -w net.ipv4.conf.default.rp_filter=0"
     google-rtr:
       kind: linux
       image: quay.io/frrouting/frr:10.0.4
       binds:
         - router2/frr.conf:/etc/frr/frr.conf
         - router2/daemons:/etc/frr/daemons
+      exec:
+        - "sysctl -w net.ipv4.ip_forward=1"
+        - "sysctl -w net.ipv4.conf.all.rp_filter=0"
+        - "sysctl -w net.ipv4.conf.default.rp_filter=0"
     oixp-rs-rtr-1:
       kind: linux
       image: quay.io/openbgpd/openbgpd:7.9
@@ -36,6 +44,10 @@ topology:
       binds:
         - router5/frr.conf:/etc/frr/frr.conf
         - router5/daemons:/etc/frr/daemons
+      exec:
+        - "sysctl -w net.ipv4.ip_forward=1"
+        - "sysctl -w net.ipv4.conf.all.rp_filter=0"
+        - "sysctl -w net.ipv4.conf.default.rp_filter=0"
 
   links:
     - endpoints: [ "valid-rtr:eth1", "oixp:port1" ]
